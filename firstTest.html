@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Without console.log()</title>
+</head>
+<body>
+    <h1>This is a js console.log performance test</h1>
+    <script>
+    console.time('console.log performance test')
+    function performanceTest(){
+        let counter = 0
+        for(let i = 0; i <= 100000; i++){
+            counter += 1
+        }
+        return counter
+    }
+    performanceTest()
+    console.timeEnd('console.log performance test')
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With console.log()</title>
+</head>
+<body>
+    <h1>This is a js console.log performance test</h1>
+    <script>
+        console.time('console.log performance test')
+        function performanceTest(){
+            let counter = 0
+            for(let i = 0; i <= 10000; i++){
+                counter += 1
+                console.log(counter) // this is one difference from another file
+            }
+            return counter
+        }
+        performanceTest()
+        console.timeEnd('console.log performance test')
+    </script>
+</body>
+</html>
